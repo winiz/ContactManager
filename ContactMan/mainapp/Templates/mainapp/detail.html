@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Contact List: {{ contact.fname }} {{contact.lname}}</title>
+<link rel="stylesheet" href="/contact/static//style.css" type="text/css" />
+</head>
+<body>
+
+<h1>Contact List: {{ contact.fname }} {{contact.lname}}</h1>
+
+<dl class="display">
+<dt>First name:</dt><dd>
+<div class="field">{{ contact.fname }}</div>
+</dd>
+<dt>Last name:</dt><dd>
+<div class="field">{{contact.lname}}</div>
+</dd>
+<dt>Email:</dt><dd>
+<div class="field">{{contact.email}}</div>
+</dd>
+<dt>Phone Number:</dt><dd>
+<div class="field">{{contact.clnum}}</div>
+</dd>
+<dt>Notes:</dt><dd>
+<div class="field">{{contact.notes}}</div>
+</dd>
+</dl>
+
+
+<p><a href="/mainapp/">List of people</a>
+| 
+<a href="./edit">Edit contact</a></p>
+
+</body>
+</html>
+
+

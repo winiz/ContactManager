@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Contact List</title>
+<link rel="stylesheet" href="/contact/static//style.css" type="text/css" />
+</head>
+<body>
+<h1>Contact List</h1>
+
+
+{% if contact_list %}
+	<ul>
+	{% for contact in contact_list %}
+		<li><a href = "/mainapp/{{ contact.id }}/">{{ contact.fname }} {{ contact.lname }}</a></li>
+	{% endfor%}
+	</ul>
+{% else %}
+	<p>No Contact is available</p>
+
+{% endif %}
+
+<p><a href="/mainapp/new">Add new contact</a></p>
+
+
+</body>
+</html>
